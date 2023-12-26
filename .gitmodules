@@ -1,3 +1,6 @@
 [submodule "assets/aur/xtb-git"]
 	path = assets/aur/xtb-git
 	url = https://aur.archlinux.org/xtb-git.git
+[submodule "ML_XTB"]
+	path = ML_XTB
+	url = git@github.com:Siyavash-Moradi/ML_XTB.git
