@@ -136,7 +136,7 @@ subroutine newXTBCalculator(env, mol, calc, fname, method, accuracy, mlparams)
    end if
 
    if (present(mlparams)) then
-      print*, "mlparams present less go"
+      print*, "mlparams present"
       if (mlparams) then
          filename = 'param_gfn2-xtb_ML.txt'
          print*, "true"
@@ -144,7 +144,6 @@ subroutine newXTBCalculator(env, mol, calc, fname, method, accuracy, mlparams)
          print*, "false"
       endif
    endif
-   print*, "FUCKU", filename
    if (.not.allocated(filename)) then
       call env%error("No parameter file or parametrisation info provided", source)
       return
@@ -164,11 +163,11 @@ subroutine newXTBCalculator(env, mol, calc, fname, method, accuracy, mlparams)
    call open_file(ich, filename, 'r')
    exist = ich /= -1
    if (exist) then
-      print*, "HOY", exist
+      print*, "nexXTB exist->", exist
       call readParam(env, ich, globpar, calc%xtbData, .true.)
       call close_file(ich)
    else ! no parameter file, check if we have one compiled into the code
-      print*, "HOY not", exist
+         print*, "newXTB doesnot exist->", exist
       call use_parameterset(filename, globpar, calc%xtbData, exist)
       if (.not.exist) then
          call env%error('Parameter file '//filename//' not found!', source)

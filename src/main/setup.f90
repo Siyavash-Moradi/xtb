@@ -97,9 +97,8 @@ subroutine newCalculator(env, mol, calc, fname, restart, accuracy, input, iff_da
    case(p_ext_eht, p_ext_xtb)
       allocate(xtb)
 
-      print *, "Constructing new XTB calculator 100"
+      print*, "Constructing new XTB calculator 100"
       if (present(mlparams)) then
-         print*, "bit box chicki chikic bam bam", mlparams
          if (mlparams) then
             call newXTBCalculator(env, mol, xtb, fname, set%gfn_method, accuracy, mlparams)
          else
@@ -107,7 +106,6 @@ subroutine newCalculator(env, mol, calc, fname, restart, accuracy, input, iff_da
          endif
       else
          call newXTBCalculator(env, mol, xtb, fname, set%gfn_method, accuracy)
-         print*, "NOTRAMMAMAMMAMAMMA"
       end if
 
       call env%check(exitRun)

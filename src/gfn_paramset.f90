@@ -65,7 +65,6 @@ subroutine use_parameterset(name,globpar,xtbData,exist)
    type(TxTBParameter), intent(out) :: globpar
    type(TxTBData), intent(out) :: xtbData
    exist = .false.
-   print*, 'use_parameterset: ', name
    select case(name)
    case('param_gfn0-xtb.txt')
       return
