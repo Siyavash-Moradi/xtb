@@ -795,7 +795,7 @@ subroutine initData(self)
    call loadArray('gfn2ml/thirdOrderAtom.dat', thirdOrderAtom,i_thirdOrderAtom) 
    call loadArray('gfn2ml/selfEnergy.dat', selfEnergy,i_selfEnergy) 
    call loadArray('gfn2ml/KCN.dat', kCN, i_kCN) 
-   print*, 'initData'
+   print*, 'initData gfn2ml'
    print*,   chemicalHardness(1)
    print*,   chemicalHardness(8)
    print*,   dipKernel(1)

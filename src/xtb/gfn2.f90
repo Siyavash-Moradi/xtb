@@ -757,27 +757,6 @@ subroutine initData(self)
    !> Data instance
    type(TxTBData), intent(out) :: self
 
-   print*, 'initData'
-   print*,   chemicalHardness(1)
-   print*,   chemicalHardness(8)
-   print*,   dipKernel(1)
-   print*,   dipKernel(8)
-   print*,   KCN(:, 1)
-   print*,   KCN(:, 8)
-   print*,   quadKernel(1)
-   print*,   quadKernel(8)
-   print*,   repAlpha(1)
-   print*,   repAlpha(8)
-   print*,   repZeff(1)
-   print*,   repZeff(8)
-   print*,   selfEnergy(:, 1)
-   print*,   selfEnergy(:, 8)
-   print*,   shellPoly(:, 1)
-   print*,   shellPoly(:, 8)
-   print*,   slaterExponent(:, 1)
-   print*,   slaterExponent(:, 8)
-   print*,   thirdOrderAtom(1)
-   print*,   thirdOrderAtom(8)
    self%name = 'GFN2-xTB'
    self%doi = '10.1021/acs.jctc.8b01176'
    self%level = 2
